@@ -59,14 +59,9 @@
  
         var material = new THREE.MeshFaceMaterial(materials); // マテリアルをセット
 
-        // 平面を作成
-        var planeGeometry = new THREE.PlaneGeometry(5,5,5,5);
-        var planeMaterial = new THREE.MeshBasicMaterial({color: 0x734e30});
-        var plane = new THREE.Mesh(planeGeometry,planeMaterial);
-        plane.rotation.set( -Math.PI/2, 0, 0 );
-        plane.position.set(0,0,0);
+        
 
-        // 木をスプライトで作成
+        // スプライトで作成
         var textureLoader = new THREE.TextureLoader();  
         var texture2 = textureLoader.load("img/pudding.png");
         const material2 = new THREE.SpriteMaterial({ map: texture2,});
@@ -79,7 +74,6 @@
         //全体のオブジェクト
 
         const all = new THREE.Group();
-        all.add(plane);//平面を追加
         all.add(box); // ビルを追加
         all.position.set(0,0,0);//全体グループの原点の位置
         scene.add(all); 
