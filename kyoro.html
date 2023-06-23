@@ -67,8 +67,8 @@
           new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/side2.png")}),
           new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/top.png")}),
           new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/bottom.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/front2-2.png")}),
-          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/back2.png")}),
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/front.png")}),
+          new THREE.MeshLambertMaterial({map:THREE.ImageUtils.loadTexture("img/back.png")}),
         ];
  
         var material = new THREE.MeshFaceMaterial(materials); // マテリアルをセット
@@ -77,7 +77,7 @@
 
         // スプライトで作成
         var textureLoader = new THREE.TextureLoader();  
-        var texture2 = textureLoader.load("img/kyoro.png");
+        var texture2 = textureLoader.load("img/pudding.png");
         const material2 = new THREE.SpriteMaterial({ map: texture2,});
 
         // 箱を作成
